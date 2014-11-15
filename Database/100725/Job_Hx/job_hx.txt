@@ -1,0 +1,20 @@
+US,Hire,New Hire,13-May-81,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Pay Increase,Pay Increase for performance,13-May-81,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Pay Increase,Pay Increase for performance,13-May-83,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Pay Increase,Pay Increase for performance,12-May-84,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Pay Increase,Pay Increase for performance,12-May-85,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Promotion,Promotion for performance,12-May-86,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Pay Increase,Pay Increase for performance,12-May-87,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Pay Increase,Pay Increase for performance,11-May-88,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Pay Increase,Pay Increase for performance,11-May-89,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Pay Increase,Pay Increase for performance,11-May-90,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Pay Increase,Pay Increase for performance,10-May-94,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Promotion,Promotion for performance,9-May-96,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Promotion,Promotion for performance,9-May-97,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Promotion,Promotion for performance,8-May-03,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Pay Increase,Pay Increase for performance,7-May-04,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Promotion,Promotion for performance,7-May-07,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Promotion,Promotion for performance,6-May-08,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Pay Increase,Pay Increase for performance,6-May-09,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Promotion,Promotion for performance,5-May-12,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3
+US,Pay Increase,Pay Increase for performance,5-May-13,L202,District Of Columbia,U202,Corporate,Active,C388,13-May-81,L202,District Of Columbia,3783 Circle Dr.,District Of Columbia,DC,20001,US,rxingles,acme_d3

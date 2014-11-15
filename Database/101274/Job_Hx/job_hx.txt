@@ -1,0 +1,10 @@
+US,Hire,New Hire,15-Mar-99,L304,Charleston,U304,Corporate,Active,C501,15-Mar-99,L304,Charleston,55 S. Humphrey Ave.,Charleston,WV,25301,US,rnhorry,acme_d1
+US,Pay Increase,Pay Increase for performance,14-Mar-00,L304,Charleston,U304,Corporate,Active,C501,15-Mar-99,L304,Charleston,55 S. Humphrey Ave.,Charleston,WV,25301,US,rnhorry,acme_d1
+US,Promotion,Promotion for performance,14-Mar-01,L304,Charleston,U304,Corporate,Active,C501,15-Mar-99,L304,Charleston,55 S. Humphrey Ave.,Charleston,WV,25301,US,rnhorry,acme_d1
+US,Pay Increase,Pay Increase for performance,13-Mar-04,L304,Charleston,U304,Corporate,Active,C501,15-Mar-99,L304,Charleston,55 S. Humphrey Ave.,Charleston,WV,25301,US,rnhorry,acme_d1
+US,Pay Increase,Pay Increase for performance,13-Mar-05,L304,Charleston,U304,Corporate,Active,C501,15-Mar-99,L304,Charleston,55 S. Humphrey Ave.,Charleston,WV,25301,US,rnhorry,acme_d1
+US,Pay Increase,Pay Increase for performance,13-Mar-06,L304,Charleston,U304,Corporate,Active,C501,15-Mar-99,L304,Charleston,55 S. Humphrey Ave.,Charleston,WV,25301,US,rnhorry,acme_d1
+US,Pay Increase,Pay Increase for performance,13-Mar-07,L304,Charleston,U304,Corporate,Active,C501,15-Mar-99,L304,Charleston,55 S. Humphrey Ave.,Charleston,WV,25301,US,rnhorry,acme_d1
+US,Promotion,Promotion for performance,12-Mar-09,L304,Charleston,U304,Corporate,Active,C501,15-Mar-99,L304,Charleston,55 S. Humphrey Ave.,Charleston,WV,25301,US,rnhorry,acme_d1
+US,Pay Increase,Pay Increase for performance,12-Mar-11,L304,Charleston,U304,Corporate,Active,C501,15-Mar-99,L304,Charleston,55 S. Humphrey Ave.,Charleston,WV,25301,US,rnhorry,acme_d1
+US,Promotion,Promotion for performance,11-Mar-12,L304,Charleston,U304,Corporate,Active,C501,15-Mar-99,L304,Charleston,55 S. Humphrey Ave.,Charleston,WV,25301,US,rnhorry,acme_d1

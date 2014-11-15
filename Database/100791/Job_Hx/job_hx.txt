@@ -1,0 +1,6 @@
+US,Hire,New Hire,14-May-03,L412,Pittsburgh,U412,Sales,Active,S689,14-May-03,L412,Pittsburgh,9932 Lincoln Ave.,Pittsburgh,PA,15211,US,domifflin,acme_d4
+US,Promotion,Promotion for performance,14-May-03,L412,Pittsburgh,U412,Sales,Active,S689,14-May-03,L412,Pittsburgh,9932 Lincoln Ave.,Pittsburgh,PA,15211,US,domifflin,acme_d4
+US,Pay Increase,Pay Increase for performance,13-May-06,L412,Pittsburgh,U412,Sales,Active,S689,14-May-03,L412,Pittsburgh,9932 Lincoln Ave.,Pittsburgh,PA,15211,US,domifflin,acme_d4
+US,Pay Increase,Pay Increase for performance,12-May-10,L412,Pittsburgh,U412,Sales,Active,S689,14-May-03,L412,Pittsburgh,9932 Lincoln Ave.,Pittsburgh,PA,15211,US,domifflin,acme_d4
+US,Pay Increase,Pay Increase for performance,11-May-12,L412,Pittsburgh,U412,Sales,Active,S689,14-May-03,L412,Pittsburgh,9932 Lincoln Ave.,Pittsburgh,PA,15211,US,domifflin,acme_d4
+US,Pay Increase,Pay Increase for performance,11-May-13,L412,Pittsburgh,U412,Sales,Active,S689,14-May-03,L412,Pittsburgh,9932 Lincoln Ave.,Pittsburgh,PA,15211,US,domifflin,acme_d4

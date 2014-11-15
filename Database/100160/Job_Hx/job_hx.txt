@@ -1,0 +1,8 @@
+US,Hire,New Hire,31-May-03,L412,Pittsburgh,U412,Corporate,Active,C238,31-May-03,L412,Pittsburgh,9932 Lincoln Ave.,Pittsburgh,PA,15211,US,cybamfield,acme_d4
+US,Promotion,Promotion for performance,31-May-03,L412,Pittsburgh,U412,Corporate,Active,C238,31-May-03,L412,Pittsburgh,9932 Lincoln Ave.,Pittsburgh,PA,15211,US,cybamfield,acme_d4
+US,Pay Increase,Pay Increase for performance,30-May-06,L412,Pittsburgh,U412,Corporate,Active,C238,31-May-03,L412,Pittsburgh,9932 Lincoln Ave.,Pittsburgh,PA,15211,US,cybamfield,acme_d4
+US,Promotion,Promotion for performance,30-May-07,L412,Pittsburgh,U412,Corporate,Active,C238,31-May-03,L412,Pittsburgh,9932 Lincoln Ave.,Pittsburgh,PA,15211,US,cybamfield,acme_d4
+US,Pay Increase,Pay Increase for performance,29-May-08,L412,Pittsburgh,U412,Corporate,Active,C238,31-May-03,L412,Pittsburgh,9932 Lincoln Ave.,Pittsburgh,PA,15211,US,cybamfield,acme_d4
+US,Promotion,Promotion for performance,29-May-09,L412,Pittsburgh,U412,Corporate,Active,C238,31-May-03,L412,Pittsburgh,9932 Lincoln Ave.,Pittsburgh,PA,15211,US,cybamfield,acme_d4
+US,Pay Increase,Pay Increase for performance,29-May-10,L412,Pittsburgh,U412,Corporate,Active,C238,31-May-03,L412,Pittsburgh,9932 Lincoln Ave.,Pittsburgh,PA,15211,US,cybamfield,acme_d4
+US,Pay Increase,Pay Increase for performance,29-May-11,L412,Pittsburgh,U412,Corporate,Active,C238,31-May-03,L412,Pittsburgh,9932 Lincoln Ave.,Pittsburgh,PA,15211,US,cybamfield,acme_d4
