@@ -44,6 +44,7 @@ shutil.copy('Employee_Info_sub.csv', 'Database/Employee_Info_sub.csv')
 os.chdir('Database')
 with open ('Employee_Info_sub.csv', 'rb') as csvfile:
     employee_info = csv.reader(csvfile, delimiter=',')
+    next(employee_info, None)##
     for col in employee_info:                               
         emp_id = col[0].strip()
         os.chdir(emp_id)
@@ -86,6 +87,7 @@ shutil.copy('Citizenship_sub.csv', 'Database/Citizenship_sub.csv')
 os.chdir('Database')
 with open ('Citizenship_sub.csv', 'rb') as csvfile:
     citizenship = csv.reader(csvfile, delimiter=',')
+    next(citizenship, None)##
     for col in citizenship:
         employee = col[0].strip()
         citizen_status = col[1]
@@ -100,7 +102,7 @@ with open ('Citizenship_sub.csv', 'rb') as csvfile:
                         orig_stdout = sys.stdout
                         out = file('score_citizenship.txt', 'a')
                         sys.stdout = out
-                        print employee,
+                        print "citizenship",
                         print ":",
                         print Citizenship_Dict[key]
                         sys.stdout = orig_stdout
@@ -122,6 +124,7 @@ os.remove('Citizenship_sub.csv')
 
 with open ('Employee_Info_sub.csv', 'rb') as csvfile:
     info = csv.reader(csvfile, delimiter=',')
+    next(info, None)##
     for col in info:
         employee = col[0].strip()
         os.chdir(employee)
@@ -151,9 +154,39 @@ with open ('Employee_Info_sub.csv', 'rb') as csvfile:
             elif age >= 70:
                 score_age = 5
                 
-            print employee,
+            print "age",
             print ":",
             print score_age
+            sys.stdout = orig_stdout
+            out.close()
+            
+            date_employ = field[3].split("-")
+            date_employ = int(date_employ[2])
+            if date_employ <= (year_current - 2000):
+                employment = year_current - (date_employ + int(2000))
+            else:    
+                employment = year_current - (date_employ + int(1900))
+            
+            orig_stdout = sys.stdout
+            out = file('score_info.txt','a')
+            sys.stdout = out
+            
+            if employment < 5:
+                score_employment = 30
+            elif employment >= 5 and employment < 10:
+                score_employment = 20
+            elif employment >= 10 and employment < 20:
+                score_employment = 15
+            elif employment >= 20 and employment < 30:
+                score_employment = 10
+            elif employment >= 40 and employment < 50:
+                score_employment = 5
+            elif employment > 50:
+                score_employment = 5
+
+            print "date employment",
+            print ":",
+            print score_employment 
             sys.stdout = orig_stdout
             out.close()
 
@@ -162,7 +195,7 @@ with open ('Employee_Info_sub.csv', 'rb') as csvfile:
                         orig_stdout = sys.stdout
                         out = file('score_info.txt', 'a')
                         sys.stdout = out
-                        print employee,
+                        print "marital status",
                         print ":",
                         print Marital_Dict[key]
                         sys.stdout = orig_stdout
@@ -173,7 +206,7 @@ with open ('Employee_Info_sub.csv', 'rb') as csvfile:
                         orig_stdout = sys.stdout
                         out = file('score_info.txt', 'a')
                         sys.stdout = out
-                        print employee,
+                        print "gender",
                         print ":",
                         print Gender_Dict[key]
                         sys.stdout = orig_stdout

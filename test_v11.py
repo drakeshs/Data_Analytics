@@ -24,6 +24,7 @@ shutil.copy('Employee_Info_sub.csv', 'Database/Employee_Info_sub.csv')
 os.chdir('Database')
 with open ('Employee_Info_sub.csv', 'rb') as csvfile:
     employee_info = csv.reader(csvfile, delimiter=',')
+    next(employee_info, None)##
     for col in employee_info:                               
         emp_id = col[0].strip()
         if not os.path.exists(emp_id):
@@ -78,6 +79,7 @@ with open ('Employee_Info_sub.csv', 'rb') as csvfile:
   
 with open ('Employee_Info_sub.csv', 'rb') as csvfile:
     employee_info = csv.reader(csvfile, delimiter=',')
+    next(employee_info, None)##
     for col in employee_info:                             
         employee = col[0].strip()
         emp_info = col[1:]
@@ -98,6 +100,7 @@ shutil.copy('Job_Hx_sub.csv', 'Database/Job_Hx_sub.csv')
 os.chdir('Database')
 with open ('Job_Hx_sub.csv', 'rb') as csvfile:
     job_hx = csv.reader(csvfile, delimiter=',')
+    next(job_hx, None)##
     NTID_Dict = {}
     for col in job_hx:
         employee = col[0].strip()
@@ -121,6 +124,7 @@ shutil.copy('Employee_Contact_sub.csv', 'Database/Employee_Contact_sub.csv')
 os.chdir('Database')   
 with open ('Employee_Contact_sub.csv', 'rb') as csvfile:
     employee_contact = csv.reader(csvfile, delimiter=',')
+    next(employee_contact, None)##
     Business_Phone = {}
     Business_Cell = {}
     Personal_Cell = {}
@@ -153,6 +157,7 @@ shutil.copy('Citizenship_sub.csv', 'Database/Citizenship_sub.csv')
 os.chdir('Database')   
 with open ('Citizenship_sub.csv', 'rb') as csvfile:
     citizenship = csv.reader(csvfile, delimiter=',')
+    next(citizenship, None)##
     for col in citizenship:
         employee = col[0].strip()
         citizenship_info = col[1:]
@@ -174,6 +179,7 @@ shutil.copy('Air_Travel_sub.csv', 'Database/Air_Travel_sub.csv')
 os.chdir('Database')   
 with open ('Air_Travel_sub.csv', 'rb') as csvfile:
     air_travel = csv.reader(csvfile, delimiter=',')
+    next(air_travel, None)##
     for col in air_travel:
         employee = col[2].strip()
         travel_info = col[0:]
@@ -195,6 +201,7 @@ shutil.copy('Access_Log.csv', 'Database/Access_Log.csv')
 os.chdir('Database')   
 with open ('Access_Log.csv', 'rb') as csvfile:
     access_log = csv.reader(csvfile, delimiter=',')
+    next(access_log, None)##
     for col in access_log:
         NTID = col[0].strip()
         access_info = col[1:]
@@ -218,6 +225,7 @@ shutil.copy('Phone_Call_Logs.csv', 'Database/Phone_Call_Logs.csv')
 os.chdir('Database')   
 with open ('Phone_Call_Logs.csv', 'rb') as csvfile:
     phone_log = csv.reader(csvfile, delimiter=',')
+    next(phone_log, None)##
     for col in phone_log:
         IN_OUT = col[9]
         Source_Num = string.replace(col[2],'(','')
