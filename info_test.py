@@ -1,10 +1,11 @@
 #! /usr/bin/env python 
 
 #version 0.2.
-#******************************************************************************
+#***********************************************************************************************************************************************
 # Scoring risk levels of the employee
 #The code should be ran from the directory where the Database has been stored
-#*******************************************************************************
+#***********************************************************************************************************************************************
+#Importing modules
 
 import csv
 import os
@@ -12,22 +13,8 @@ import sys
 import shutil
 import datetime
 
-# Access_Log[NTID HOST_IP HOST_NAME DATE_AND_TIME]
-
-# Air_Travel[TRIP_ID NAME EMPLOYEE_ID AIRLINES FLIGHT_NUMBER DEPARTURE_DATE DEPARTURE_TIME DEPARTURE_CITY ARRIVAL_DATE ARRIVAL_TIME ARRIVAL_CITY]
-
-# Citizenship[Employee_ID Citizenship_Status Citizen_Country]
-
-# Employee_Contact[Employee_ID Region Business_E-Mail Personal_E-Mail Bussiness Cell Bussiness_Phone Bussiness_Cell Bussiness_Phone Personal_Cell Fax ]
-
-# EMployee_Info[Employee_ID Region Birth_Country Birth_Date Start_Date First_Name MI Last_Name First_Name Citizenship Gender Marital_Status]
-
-# Job_HX[Employee_ID Region Action Reason Start_Date Area_Code City Location_Area_Code Department Status Job_Code Effective Area_Code City Address City State Zip Country NTID Domain]
-
-# Phone_Call_Log[FAN Acct.Num Src_Num Caller_Name Date Time Source Destination Destination_Number In/Out Duration]
-
-#************************************************************************************************************************************************
-#Citizenship Score
+#***********************************************************************************************************************************************
+#The dictionaries assign score values to different employee citizenship and information attributes
 
 Citizenship_Dict = {'Citizen of Costa Rica' : 15, 'Citizen of Eritrea' : 10, 'Citizen of Nepal' : 20, 'Citizen of Peru' : 20, 'Citizen of Sweden' : 30, 'Citizen of United States' : 20 }
 
@@ -38,18 +25,19 @@ Gender_Dict = {'F' : 45, 'M' : 55}
 Age_Dict = {'20-30' : 15, '30-40': 25, '40-50' : 25, '50-60' : 20, '60-70' : 10, '70-80' : 5}
 
 
-
-#Creating the txt files.
-shutil.copy('Employee_Info_sub.csv', 'Database/Employee_Info_sub.csv')
-os.chdir('Database')
-with open ('Employee_Info_sub.csv', 'rb') as csvfile:
-    employee_info = csv.reader(csvfile, delimiter=',')
-    next(employee_info, None)##
-    for col in employee_info:                               
-        emp_id = col[0].strip()
-        os.chdir(emp_id)
+#***********************************************************************************************************************************************
+#Initializes the text files that will store each employee's score
+#Prevents the appending of repeated information every time the code is implemented
+shutil.copy('Employee_Info_sub.csv', 'Database/Employee_Info_sub.csv') #moves CSV info file to the 'Database' directory
+os.chdir('Database')                                                   #CSV is used as a guide to iterate through all the employee IDs
+with open ('Employee_Info_sub.csv', 'rb') as csvfile:     #Opens the CSV file
+    employee_info = csv.reader(csvfile, delimiter=',') #Stores the fileds in a variable 'employee_info'
+    next(employee_info, None)              #Skips the first line of the CSV (Headers)
+    for col in employee_info:              #Iterates through the columns in the CSV file, reading info for the same employee
+        emp_id = col[0].strip()            #stores the employee id in variable 'emp_id'. It is stripped to avoid undesired blank spaces
+        os.chdir(emp_id)                   
         os.chdir('Employee_Info')
-        if os.path.exists('score_info.txt'):
+        if os.path.exists('score_info.txt'): #If path exits, then remove it. Every time program runs, txt files are removed and regenerated
             os.remove('score_info.txt')
         os.chdir('..')
         os.chdir('Job_Hx')
@@ -77,34 +65,35 @@ with open ('Employee_Info_sub.csv', 'rb') as csvfile:
                 os.remove('score_citizenship.txt')
         os.chdir('..')
         os.chdir('..')
-os.chdir('..')
+os.chdir('..')                                     #Return to the main directory from which code was executed
  
 
 #***********************************************************************************************************************************************
+#Score generation of the scores according to info and citizenship
 
 shutil.copy('Citizenship_sub.csv', 'Database/Citizenship_sub.csv')
 
 os.chdir('Database')
 with open ('Citizenship_sub.csv', 'rb') as csvfile:
     citizenship = csv.reader(csvfile, delimiter=',')
-    next(citizenship, None)##
+    next(citizenship, None)
     for col in citizenship:
         employee = col[0].strip()
         citizen_status = col[1]
         os.chdir(employee)
-        os.chdir('Citizenship')
-        with open ('citizenship.txt', 'rb') as f:
-            field = [x for x in f.read().split(",") if x != ""]
-            for i in range(0, 1):
-                field[i] = field[i].strip()
-                for key in sorted(Citizenship_Dict):
+        os.chdir('Citizenship')                                     #cd to the subdirectory Citizenship
+        with open ('citizenship.txt', 'rb') as f:                   #reads txt file that contains all comma-separated citizenship information
+            field = [x for x in f.read().split(",") if x != ""]     #parses the file using ',' as a delimiter 
+            for i in range(0, 1):                                   #iterates through the 2 fields in text file
+                field[i] = field[i].strip()                        
+                for key in sorted(Citizenship_Dict):                #iterates through the dictionary values and finds if there is a match
                     if key == field[i]:
-                        orig_stdout = sys.stdout
-                        out = file('score_citizenship.txt', 'a')
-                        sys.stdout = out
+                        orig_stdout = sys.stdout                    #redirects output
+                        out = file('score_citizenship.txt', 'a')    #defines file to print output
+                        sys.stdout = out                            
                         print "citizenship",
                         print ":",
-                        print Citizenship_Dict[key]
+                        print Citizenship_Dict[key]                 #print the score according to the matching file in the dictinary and the field
                         sys.stdout = orig_stdout
                         out.close()
         
@@ -119,7 +108,7 @@ with open ('Citizenship_sub.csv', 'rb') as csvfile:
             os.chdir('..')
 os.remove('Citizenship_sub.csv')
        
-#*******************************************************************************************************************************
+#***********************************************************************************************************************************************
 #shutil.copy('Employee_Info_sub.csv', 'Database/Employee_Info_sub.csv')
 
 with open ('Employee_Info_sub.csv', 'rb') as csvfile:
