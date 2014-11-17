@@ -113,7 +113,7 @@ os.remove('Citizenship_sub.csv')
 
 with open ('Employee_Info_sub.csv', 'rb') as csvfile:
     info = csv.reader(csvfile, delimiter=',')
-    next(info, None)##
+    next(info, None)
     for col in info:
         employee = col[0].strip()
         os.chdir(employee)
