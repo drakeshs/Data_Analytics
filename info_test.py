@@ -209,5 +209,5 @@ with open ('Employee_Info_sub.csv', 'rb') as csvfile:
     
         else:
             os.chdir('..')
-            os.chdir('..')
+            os.chdir('..') # Return to source directory
 
