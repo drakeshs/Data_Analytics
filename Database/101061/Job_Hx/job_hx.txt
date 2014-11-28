@@ -1,5 +1,0 @@
-US,Hire,New Hire,30-Oct-08,L248,Ann Arbor,U248,IT,Active,I312,30-Oct-08,L248,Ann Arbor,9323 Anchor Ave.,Ann Arbor,MI,48105,US,dbhaghighi,acme_d2
-US,Pay Increase,Pay Increase for performance,30-Oct-08,L248,Ann Arbor,U248,IT,Active,I312,30-Oct-08,L248,Ann Arbor,9323 Anchor Ave.,Ann Arbor,MI,48105,US,dbhaghighi,acme_d2
-US,Promotion,Promotion for performance,30-Oct-09,L248,Ann Arbor,U248,IT,Active,I312,30-Oct-08,L248,Ann Arbor,9323 Anchor Ave.,Ann Arbor,MI,48105,US,dbhaghighi,acme_d2
-US,Promotion,Promotion for performance,30-Oct-11,L248,Ann Arbor,U248,IT,Active,I312,30-Oct-08,L248,Ann Arbor,9323 Anchor Ave.,Ann Arbor,MI,48105,US,dbhaghighi,acme_d2
-US,Promotion,Promotion for performance,29-Oct-12,L248,Ann Arbor,U248,IT,Active,I312,30-Oct-08,L248,Ann Arbor,9323 Anchor Ave.,Ann Arbor,MI,48105,US,dbhaghighi,acme_d2
