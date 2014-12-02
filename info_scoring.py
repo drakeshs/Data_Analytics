@@ -1,6 +1,6 @@
 #! /usr/bin/env python 
 
-#version 0.2.
+#v2.0.0
 #*************************************************************************************
 # Scoring risk levels of the employee
 #The code should be ran from the directory where the Database has been stored
@@ -35,35 +35,9 @@ with open ('Employee_Info_sub.csv', 'rb') as csvfile:     #Opens the CSV file
     next(employee_info, None)              #Skips the first line of the CSV (Headers)
     for col in employee_info:              #Iterates through the columns in the CSV file, reading info for the same employee
         emp_id = col[0].strip()            #stores the employee id in variable 'emp_id'. It is stripped to avoid undesired blank spaces
-        os.chdir(emp_id)                   
-        os.chdir('Employee_Info')
-        if os.path.exists('score_info.txt'): #If path exits, then remove it. Every time program runs, txt files are removed and regenerated
-            os.remove('score_info.txt')
-        os.chdir('..')
-        os.chdir('Job_Hx')
+        os.chdir(emp_id)
         if os.path.exists('score.txt'):
-                os.remove('score.txt')
-        os.chdir('..')
-        os.chdir('Access_Log')
-        if os.path.exists('score.txt'):
-                os.remove('score.txt')
-        os.chdir('..')
-        os.chdir('Air_Travel')
-        if os.path.exists('score.txt'):
-                os.remove('score.txt')
-        os.chdir('..')
-        os.chdir('Employee_Contact')
-        if os.path.exists('score.txt'):
-                os.remove('score.txt')
-        os.chdir('..')
-        os.chdir('Phone_Call_Logs')
-        if os.path.exists('score.txt'):
-                os.remove('score.txt')
-        os.chdir('..')
-        os.chdir('Citizenship')
-        if os.path.exists('score_citizenship.txt'):
-                os.remove('score_citizenship.txt')
-        os.chdir('..')
+            os.remove('score.txt')
         os.chdir('..')
 os.chdir('..')                                     #Return to the main directory from which code was executed
  
@@ -89,18 +63,19 @@ with open ('Citizenship_sub.csv', 'rb') as csvfile:
                 for key in sorted(Citizenship_Dict):                #iterates through the dictionary values and finds if there is a match
                     if key == field[i]:
                         orig_stdout = sys.stdout                    #redirects output
-                        out = file('score_citizenship.txt', 'a')    #defines file to print output
+                        out = file('../score.txt', 'a')    #defines file to print output
                         sys.stdout = out                            
+                        score_citizenship = Citizenship_Dict[key]
                         print "citizenship",
                         print ":",
-                        print Citizenship_Dict[key]                 #print the score according to the matching file in the dictinary and the field
+                        print score_citizenship                  #print the score according to the matching file in the dictionary and the field
                         sys.stdout = orig_stdout
                         out.close()
         
         
-        if os.path.exists('score_citizenship.txt'):
+        if os.path.exists('score.txt'):
             os.chdir('..')
-            shutil.copy('./Citizenship/score_citizenship.txt', './score_citizenship.txt')
+           # shutil.copy('./Citizenship/score.txt', './score.txt')
             os.chdir('..')
     
         else:
@@ -128,7 +103,7 @@ with open ('Employee_Info_sub.csv', 'rb') as csvfile:
             year_current = int(date.today().year)
             age = year_current - (int(date_birth[2])+int(1900))
             orig_stdout = sys.stdout
-            out = file('score_info.txt', 'a')
+            out = file('../score.txt', 'a')
             sys.stdout = out
             if age < 30:
                 score_age = 15
@@ -145,7 +120,7 @@ with open ('Employee_Info_sub.csv', 'rb') as csvfile:
                 
             print "age",
             print ":",
-            print score_age
+            print score_age 
             sys.stdout = orig_stdout
             out.close()
             
@@ -157,7 +132,7 @@ with open ('Employee_Info_sub.csv', 'rb') as csvfile:
                 employment = year_current - (date_employ + int(1900))
             
             orig_stdout = sys.stdout
-            out = file('score_info.txt','a')
+            out = file('../score.txt','a')
             sys.stdout = out
             
             if employment < 5:
@@ -173,41 +148,68 @@ with open ('Employee_Info_sub.csv', 'rb') as csvfile:
             elif employment > 50:
                 score_employment = 5
 
-            print "date employment",
+            print "date_employment",
             print ":",
-            print score_employment 
+            print score_employment  
             sys.stdout = orig_stdout
             out.close()
 
             for key in sorted(Marital_Dict):
                 if key == field[10]:
                         orig_stdout = sys.stdout
-                        out = file('score_info.txt', 'a')
+                        out = file('../score.txt', 'a')
                         sys.stdout = out
-                        print "marital status",
+                        score_marital = Marital_Dict[key]
+                        print "marital_status",
                         print ":",
-                        print Marital_Dict[key]
+                        print score_marital 
                         sys.stdout = orig_stdout
                         out.close()
 
             for key in sorted(Gender_Dict):
                 if key == field[9]:
                         orig_stdout = sys.stdout
-                        out = file('score_info.txt', 'a')
+                        out = file('../score.txt', 'a')
                         sys.stdout = out
+                        score_gender = Gender_Dict[key]
                         print "gender",
                         print ":",
-                        print Gender_Dict[key]
+                        print score_gender 
                         sys.stdout = orig_stdout
                         out.close()
 
 
-        if os.path.exists('score_info.txt'):
+        if os.path.exists('score.txt'):
             os.chdir('..')
-            shutil.copy('./Employee_Info/score_info.txt', './score_info.txt')
+           # shutil.copy('./Employee_Info/score.txt', './score.txt')
             os.chdir('..')
     
         else:
             os.chdir('..')
             os.chdir('..') # Return to source directory
 
+#**********************************************************************************************
+#Calculating total score
+if os.path.exists('score_total.txt'):
+    os.remove('score_total.txt')
+with open ('Employee_Info_sub.csv', 'rb') as csvfile:
+    info = csv.reader(csvfile, delimiter=',')
+    next(info, None)
+    for col in info:
+        employee = col[0].strip()
+        os.chdir(employee)
+        total_score = 0
+        with open ('score.txt', 'rb') as f:
+           for cols in (row.strip().split() for row in f):
+              # print cols[2]
+               total_score = int(cols[2]) + total_score
+           
+           orig_stdout = sys.stdout
+           out = file('../score_total.txt', 'a')
+           sys.stdout = out
+           print employee,
+           print ":",
+           print total_score
+           sys.stdout = orig_stdout
+           out.close()
+        os.chdir('..')
