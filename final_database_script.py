@@ -1,0 +1,273 @@
+#! /usr/bin/env python 
+
+#version 1.120.
+#********************************************************************
+#Program takes the first number of the csv version of the           
+#employees's information (employee ID) and exports the numbers       
+#to a text file. Directories with the employee IDs are then created  
+#******************************************************************** 
+
+#Importing necessary libraries 
+import csv
+import os
+import sys
+import shutil
+import fnmatch
+import glob
+import string
+
+
+#Open csv file and printing the first column (employee ID)
+if not os.path.exists('Database'):
+    os.makedirs('Database')
+shutil.copy('Employee_Info.csv', 'Database/Employee_Info.csv')
+os.chdir('Database')
+with open ('Employee_Info.csv', 'rb') as csvfile:
+    employee_info = csv.reader(csvfile, delimiter=',')
+    next(employee_info, None)##
+    for col in employee_info:                               
+        emp_id = col[0].strip()
+        if not os.path.exists(emp_id):
+            os.makedirs(emp_id)
+            os.chdir(emp_id)
+            if not os.path.exists('Employee_Info'):
+                os.makedirs('Employee_Info')
+            if not os.path.exists('Job_Hx'):
+                os.makedirs('Job_Hx')
+            if not os.path.exists('Access_Log'):
+                os.makedirs('Access_Log')
+            if not os.path.exists('Air_Travel'):
+                os.makedirs('Air_Travel')
+            if not os.path.exists('Employee_Contact'):
+                os.makedirs('Employee_Contact')
+            if not os.path.exists('Phone_Call_Logs'):
+                os.makedirs('Phone_Call_Logs')
+            if not os.path.exists('Citizenship'):
+                os.makedirs('Citizenship')
+            os.chdir('..')
+        else:
+            os.chdir(emp_id)
+            os.chdir('Employee_Info')
+            if os.path.exists('employee_info.txt'):
+                os.remove('employee_info.txt')
+            os.chdir('..')
+            os.chdir('Job_Hx')
+            if os.path.exists('job_hx.txt'):
+                os.remove('job_hx.txt')
+            os.chdir('..')
+            os.chdir('Access_Log')
+            if os.path.exists('access_log.txt'):
+                os.remove('access_log.txt')
+            os.chdir('..')
+            os.chdir('Air_Travel')
+            if os.path.exists('air_travel.txt'):
+                os.remove('air_travel.txt')
+            os.chdir('..')
+            os.chdir('Employee_Contact')
+            if os.path.exists('employee_contact.txt'):
+                os.remove('employee_contact.txt')
+            os.chdir('..')
+            os.chdir('Phone_Call_Logs')
+            if os.path.exists('phone_call_logs.txt'):
+                os.remove('phone_call_logs.txt')
+            os.chdir('..')
+            os.chdir('Citizenship')
+            if os.path.exists('citizenship.txt'):
+                os.remove('citizenship.txt')
+            os.chdir('..')
+            os.chdir('..')
+  
+with open ('Employee_Info.csv', 'rb') as csvfile:
+    employee_info = csv.reader(csvfile, delimiter=',')
+    next(employee_info, None)##
+    for col in employee_info:                             
+        employee = col[0].strip()
+        emp_info = col[1:]
+        os.chdir(employee)
+        os.chdir('Employee_Info')
+        orig_stdout = sys.stdout
+        out = file('employee_info.txt', 'w')
+        sys.stdout = out
+        print ','.join(emp_info)    
+        sys.stdout = orig_stdout
+        out.close()
+        os.chdir('..')
+        os.chdir('..')                                    
+os.remove('Employee_Info.csv')
+os.chdir('..')                                         
+
+shutil.copy('Job_Hx.csv', 'Database/Job_Hx.csv')
+os.chdir('Database')
+with open ('Job_Hx.csv', 'rb') as csvfile:
+    job_hx = csv.reader(csvfile, delimiter=',')
+    next(job_hx, None)##
+    NTID_Dict = {}
+    for col in job_hx:
+        employee = col[0].strip()
+        job_info = col[1:]
+        emp_NTID = col[19]
+        NTID_Dict[emp_NTID] = employee
+        os.chdir(employee)
+        os.chdir('Job_Hx')
+        orig_stdout = sys.stdout         
+        out = file('job_hx.txt', 'a')
+        sys.stdout = out
+        print ','.join(job_info)
+        sys.stdout = orig_stdout
+        out.close()
+        os.chdir('..')
+        os.chdir('..')
+os.remove('Job_Hx.csv')
+os.chdir('..')
+
+shutil.copy('Employee_Contact.csv', 'Database/Employee_Contact.csv')
+os.chdir('Database')   
+with open ('Employee_Contact.csv', 'rb') as csvfile:
+    employee_contact = csv.reader(csvfile, delimiter=',')
+    next(employee_contact, None)##
+    Business_Phone = {}
+    Business_Cell = {}
+    Personal_Cell = {}
+    Fax = {}
+    for col in employee_contact:
+        employee = col[0].strip()
+        contact_info = col[1:]
+        business_cell = col[4]
+        business_phone = col[5]
+        personal_cell = col[8]
+        fax = col[9]
+        Business_Cell[business_cell] = employee
+        Business_Phone[business_phone] = employee
+        Personal_Cell[personal_cell] = employee
+        Fax[fax] = employee
+        os.chdir(employee)
+        os.chdir('Employee_Contact')
+        orig_stdout = sys.stdout         
+        out = file('employee_contact.txt', 'a')
+        sys.stdout = out
+        print ','.join(contact_info)
+        sys.stdout = orig_stdout
+        out.close()
+        os.chdir('..')
+        os.chdir('..')
+os.remove('Employee_Contact.csv')
+os.chdir('..')
+
+shutil.copy('Citizenship.csv', 'Database/Citizenship.csv')
+os.chdir('Database')   
+with open ('Citizenship.csv', 'rb') as csvfile:
+    citizenship = csv.reader(csvfile, delimiter=',')
+    next(citizenship, None)##
+    for col in citizenship:
+        employee = col[0].strip()
+        citizenship_info = col[1:]
+        if os.path.exists(employee):
+            os.chdir(employee)
+            os.chdir('Citizenship')
+            orig_stdout = sys.stdout         
+            out = file('citizenship.txt', 'a')
+            sys.stdout = out
+            print ','.join(citizenship_info)
+            sys.stdout = orig_stdout
+            out.close()
+            os.chdir('..')
+            os.chdir('..')
+os.remove('Citizenship.csv')
+os.chdir('..')
+
+shutil.copy('Air_Travel.csv', 'Database/Air_Travel.csv')
+os.chdir('Database')   
+with open ('Air_Travel.csv', 'rb') as csvfile:
+    air_travel = csv.reader(csvfile, delimiter=',')
+    next(air_travel, None)##
+    for col in air_travel:
+        employee = col[2].strip()
+        travel_info = col[0:]
+        travel_info.pop(2)
+        os.chdir(employee)
+        os.chdir('Air_Travel')
+        orig_stdout = sys.stdout         
+        out = file('air_travel.txt', 'a')
+        sys.stdout = out
+        print ','.join(travel_info)
+        sys.stdout = orig_stdout
+        out.close()
+        os.chdir('..')
+        os.chdir('..')
+os.remove('Air_Travel.csv')
+os.chdir('..')
+
+shutil.copy('Access_Log.csv', 'Database/Access_Log.csv')
+os.chdir('Database')   
+with open ('Access_Log.csv', 'rb') as csvfile:
+    access_log = csv.reader(csvfile, delimiter=',')
+    next(access_log, None)##
+    for col in access_log:
+        NTID = col[0].strip()
+        access_info = col[1:]
+        emp_id = NTID_Dict.get(NTID,'None')
+        if os.path.exists(emp_id):
+            os.chdir(emp_id)
+            os.chdir('Access_Log')
+            orig_stdout = sys.stdout         
+            out = file('access_log.txt', 'a')
+            sys.stdout = out
+            print ','.join(access_info)
+            sys.stdout = orig_stdout
+            out.close()
+            os.chdir('..')
+            os.chdir('..')
+os.remove('Access_Log.csv')
+os.chdir('..')
+
+
+shutil.copy('Phone_Call_Logs.csv', 'Database/Phone_Call_Logs.csv')
+os.chdir('Database')   
+with open ('Phone_Call_Logs.csv', 'rb') as csvfile:
+    phone_log = csv.reader(csvfile, delimiter=',')
+    next(phone_log, None)##
+    for col in phone_log:
+        IN_OUT = col[9]
+        Source_Num = string.replace(col[2],'(','')
+        Source_Num = string.replace(Source_Num,')','')
+        Source_Num = string.replace(Source_Num,'-','')
+        Source_Num = string.replace(Source_Num,' ','')
+        Destination_Num = string.replace(col[8],'(','')
+        Destination_Num = string.replace(Destination_Num,')','')
+        Destination_Num = string.replace(Destination_Num,'-','')
+        Destination_Num = string.replace(Destination_Num,' ','')
+        phone_info = col[0:]
+        if IN_OUT=='OUT':
+            number = Source_Num
+            emp_id = Business_Cell.get(number,'None')
+            if not os.path.exists(emp_id):
+                emp_id = Business_Phone.get(number,'None')
+                if not os.path.exists(emp_id):
+                    emp_id = Personal_Cell.get(number,'None')
+                    if not os.path.exists(emp_id):
+                        emp_id = Fax.get(number,'None')
+            
+        if IN_OUT == 'IN':
+            number = Destination_Num
+            emp_id = Business_Cell.get(number,'None')
+            if not os.path.exists(emp_id):
+                emp_id = Business_Phone.get(number,'None')
+                if not os.path.exists(emp_id):
+                    emp_id = Personal_Cell.get(number,'None')
+                    if not os.path.exists(emp_id):
+                        emp_id = Fax.get(number,'None')
+                        
+        if os.path.exists(emp_id):
+            os.chdir(emp_id)
+            os.chdir('Phone_Call_Logs')
+            orig_stdout = sys.stdout         
+            out = file('phone_call_logs.txt', 'a')
+            sys.stdout = out
+            print ','.join(phone_info)
+            sys.stdout = orig_stdout
+            out.close()
+            os.chdir('..')
+            os.chdir('..')
+        
+os.remove('Phone_Call_Logs.csv')
+os.chdir('..')
