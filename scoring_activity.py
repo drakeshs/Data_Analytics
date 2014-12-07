@@ -24,10 +24,10 @@ import shutil
 # data is not appended further if the 
 # script is rerun.
 #------------------------------------------
-
+os.chdir('Database')
 if os.path.exists('score_activity.txt'):
     os.remove('score_activity.txt')
-
+os.chdir('..')
 #-----------------------------------------------------------------
 # The process in this section consists of opening the Employee
 # Info csv file to search through each employee directory by
