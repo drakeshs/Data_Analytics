@@ -1,0 +1,7 @@
+To run the risk calculator code, the following steps must be followed:
+All code must be ran from the current directory (.)
+
+To run subset:
+   (0) Run test_v11.py to generate the master Database with the employee background information
+   (1) Run score_info.py to generate the scores according to employee information
+   (2) Run score_activity.py to generate scores according to employee activity

@@ -1,0 +1,17 @@
+US,Hire,New Hire,19-Nov-86,L757,Norfolk,U757,Engineering,Active,E428,19-Nov-86,L757,Norfolk,7712 S. 67th Ave.,Norfolk,VA,23517,US,lbbroadus,acme_d3
+US,Promotion,Promotion for performance,19-Nov-87,L757,Norfolk,U757,Engineering,Active,E428,19-Nov-86,L757,Norfolk,7712 S. 67th Ave.,Norfolk,VA,23517,US,lbbroadus,acme_d3
+US,Pay Increase,Pay Increase for performance,18-Nov-91,L757,Norfolk,U757,Engineering,Active,E428,19-Nov-86,L757,Norfolk,7712 S. 67th Ave.,Norfolk,VA,23517,US,lbbroadus,acme_d3
+US,Pay Increase,Pay Increase for performance,17-Nov-93,L757,Norfolk,U757,Engineering,Active,E428,19-Nov-86,L757,Norfolk,7712 S. 67th Ave.,Norfolk,VA,23517,US,lbbroadus,acme_d3
+US,Pay Increase,Pay Increase for performance,17-Nov-95,L757,Norfolk,U757,Engineering,Active,E428,19-Nov-86,L757,Norfolk,7712 S. 67th Ave.,Norfolk,VA,23517,US,lbbroadus,acme_d3
+US,Pay Increase,Pay Increase for performance,16-Nov-97,L757,Norfolk,U757,Engineering,Active,E428,19-Nov-86,L757,Norfolk,7712 S. 67th Ave.,Norfolk,VA,23517,US,lbbroadus,acme_d3
+US,Promotion,Promotion for performance,16-Nov-99,L757,Norfolk,U757,Engineering,Active,E428,19-Nov-86,L757,Norfolk,7712 S. 67th Ave.,Norfolk,VA,23517,US,lbbroadus,acme_d3
+US,Pay Increase,Pay Increase for performance,15-Nov-00,L757,Norfolk,U757,Engineering,Active,E428,19-Nov-86,L757,Norfolk,7712 S. 67th Ave.,Norfolk,VA,23517,US,lbbroadus,acme_d3
+US,Promotion,Promotion for performance,15-Nov-01,L757,Norfolk,U757,Engineering,Active,E428,19-Nov-86,L757,Norfolk,7712 S. 67th Ave.,Norfolk,VA,23517,US,lbbroadus,acme_d3
+US,Promotion,Promotion for performance,15-Nov-02,L757,Norfolk,U757,Engineering,Active,E428,19-Nov-86,L757,Norfolk,7712 S. 67th Ave.,Norfolk,VA,23517,US,lbbroadus,acme_d3
+US,Pay Increase,Pay Increase for performance,14-Nov-04,L757,Norfolk,U757,Engineering,Active,E428,19-Nov-86,L757,Norfolk,7712 S. 67th Ave.,Norfolk,VA,23517,US,lbbroadus,acme_d3
+US,Pay Increase,Pay Increase for performance,14-Nov-05,L757,Norfolk,U757,Engineering,Active,E428,19-Nov-86,L757,Norfolk,7712 S. 67th Ave.,Norfolk,VA,23517,US,lbbroadus,acme_d3
+US,Pay Increase,Pay Increase for performance,14-Nov-06,L757,Norfolk,U757,Engineering,Active,E428,19-Nov-86,L757,Norfolk,7712 S. 67th Ave.,Norfolk,VA,23517,US,lbbroadus,acme_d3
+US,Pay Increase,Pay Increase for performance,14-Nov-07,L757,Norfolk,U757,Engineering,Active,E428,19-Nov-86,L757,Norfolk,7712 S. 67th Ave.,Norfolk,VA,23517,US,lbbroadus,acme_d3
+US,Pay Increase,Pay Increase for performance,13-Nov-09,L757,Norfolk,U757,Engineering,Active,E428,19-Nov-86,L757,Norfolk,7712 S. 67th Ave.,Norfolk,VA,23517,US,lbbroadus,acme_d3
+US,Pay Increase,Pay Increase for performance,13-Nov-11,L757,Norfolk,U757,Engineering,Active,E428,19-Nov-86,L757,Norfolk,7712 S. 67th Ave.,Norfolk,VA,23517,US,lbbroadus,acme_d3
+US,Pay Increase,Pay Increase for performance,12-Nov-12,L757,Norfolk,U757,Engineering,Active,E428,19-Nov-86,L757,Norfolk,7712 S. 67th Ave.,Norfolk,VA,23517,US,lbbroadus,acme_d3

@@ -5,6 +5,8 @@
 #Plots the results obtained from employee info 
 #Code should be ran from the directory where the Database has been stored
 #****************************************************************************************************************
+#installations
+# sudo apt-get install python-matplotlib
 
 #importing modules
 

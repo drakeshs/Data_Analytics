@@ -1,0 +1,5 @@
+citizenship : 20
+age : 10
+date_employment : 15
+marital_status : 50
+gender : 45

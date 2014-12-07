@@ -1,0 +1,10 @@
+Different graphs portraying the risk factor:
+-Bar diagram 
+-Pie diagram 
+-linear tendencies
+
+I = Info
+HA = Happiness
+ACT = Activity
+
+(I/HA) + ACT

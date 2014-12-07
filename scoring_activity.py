@@ -25,8 +25,8 @@ import shutil
 # script is rerun.
 #------------------------------------------
 os.chdir('Database')
-if os.path.exists('score_activity.txt'):
-    os.remove('score_activity.txt')
+if os.path.exists('score_activity.csv'):
+    os.remove('score_activity.csv')
 os.chdir('..')
 #-----------------------------------------------------------------
 # The process in this section consists of opening the Employee
@@ -82,7 +82,7 @@ with open ('Employee_Info_sub.csv', 'rb') as csvfile:
             os.chdir('..')
             os.chdir('..')
             orig_stdout = sys.stdout
-            out = file('score_activity.txt', 'a')
+            out = file('score_activity.csv', 'a')
             sys.stdout = out
             #-------------------------------------------------
             # Set scoring citeria - starting with access_logs
@@ -136,7 +136,7 @@ with open ('Employee_Info_sub.csv', 'rb') as csvfile:
             if (air_travel_lines > 65):
                 air_travel_score = 33
             print emp_id,
-            print ':',
+            print ',',
             print (phone_log_score + access_log_score + air_travel_score)
             sys.stdout = orig_stdout
             out.close()
