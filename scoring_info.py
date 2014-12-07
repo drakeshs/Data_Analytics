@@ -190,8 +190,8 @@ with open ('Employee_Info_sub.csv', 'rb') as csvfile:
 
 #**********************************************************************************************
 #Calculating total score
-if os.path.exists('score_info.txt'):
-    os.remove('score_info.txt')
+if os.path.exists('score_info.csv'):
+    os.remove('score_info.csv')
 with open ('Employee_Info_sub.csv', 'rb') as csvfile:
     info = csv.reader(csvfile, delimiter=',')
     next(info, None)
@@ -202,13 +202,13 @@ with open ('Employee_Info_sub.csv', 'rb') as csvfile:
         with open ('score.txt', 'rb') as f:
            for cols in (row.strip().split() for row in f):
               # print cols[2]
-               total_score = int(cols[2]) + total_score
+               total_score = (int(cols[2]) + total_score)/5
            
            orig_stdout = sys.stdout
-           out = file('../score_info.txt', 'a')
+           out = file('../score_info.csv', 'a')
            sys.stdout = out
            print employee,
-           print ":",
+           print ",",
            print total_score
            sys.stdout = orig_stdout
            out.close()
